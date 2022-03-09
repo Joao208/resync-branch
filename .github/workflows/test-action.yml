@@ -1,8 +1,11 @@
 name: Test Action
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, synchronize, reopened]
 jobs:
   test:
     runs-on: ubuntu-latest
