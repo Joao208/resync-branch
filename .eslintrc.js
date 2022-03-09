@@ -14,6 +14,6 @@ module.exports = {
     semi: 'off',
     'import/no-extraneous-dependencies': 'off',
     'comma-dangle': 'off',
-    'max-len': 200,
+    'max-len': 'off',
   },
 }
