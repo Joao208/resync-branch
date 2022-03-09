@@ -27,7 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ./
+      - name: ReSync Branch
+        uses: Joao208/resync-branch@1.5.0
         with:
           PERSONAL_TOKEN: ${{secrets.PERSONAL_TOKEN}}
           BRANCH_NAME: development
@@ -47,7 +48,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ./
+      - name: ReSync Branch
+        uses: Joao208/resync-branch@1.5.0
         with:
           PERSONAL_TOKEN: ${{secrets.PERSONAL_TOKEN}}
           BRANCH_NAME: development
