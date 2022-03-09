@@ -1,6 +1,9 @@
 name: 'ReSync Branch'
 description: 'Action to rebase/reset any branch equal default branch'
 author: 'Joao Barros'
+branding:
+    icon: "cloud-rain"
+    color: "gray-dark"
 
 inputs:
   PERSONAL_TOKEN:
