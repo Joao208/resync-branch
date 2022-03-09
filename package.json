@@ -1,6 +1,6 @@
 {
   "name": "resync-branch",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "Action to rebase/reset any branch equal default branch",
   "main": "src/index.ts",
   "scripts": {
