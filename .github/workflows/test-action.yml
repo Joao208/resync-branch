@@ -15,4 +15,4 @@ jobs:
         with:
           PERSONAL_TOKEN: ${{secrets.PERSONAL_TOKEN}}
           BRANCH_NAME: staging
-          DEFAULT_BRANCH: $default-branch
+          DEFAULT_BRANCH: ${{default-branch}}
