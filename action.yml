@@ -1,0 +1,18 @@
+name: 'ReSync Branch'
+description: 'Action to rebase/reset any branch equal default branch'
+author: 'Joao Barros'
+
+inputs:
+  PERSONAL_TOKEN:
+    description: 'GitHub personal token'
+    required: true
+  BRANCH_NAME:
+    description: 'The name of branch to rebase'
+    required: true
+  DEFAULT_BRANCH:
+    description: 'The name of default branch'
+    required: true
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

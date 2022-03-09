@@ -1,0 +1,15 @@
+name: Test Action
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+        with:
+          PERSONAL_TOKEN: ${{secrets.PERSONAL_TOKEN}}
+          BRANCH_NAME: staging
+          DEFAULT_BRANCH: $default-branch

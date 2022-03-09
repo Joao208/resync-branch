@@ -1,0 +1,29 @@
+name: Unit Tests
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+    
+jobs:
+  test-flow:
+    name: Workflow
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dev dependencies
+        run: yarn install -D
+
+      - name: Run the tests
+        run: yarn test:ci
+
+      - uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: true
+          verbose: true
