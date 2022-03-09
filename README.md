@@ -31,7 +31,7 @@ jobs:
         with:
           PERSONAL_TOKEN: ${{secrets.PERSONAL_TOKEN}}
           BRANCH_NAME: development
-          DEFAULT_BRANCH: ${{default-branch}}
+          DEFAULT_BRANCH: ${{github.event.repository.default_branch}}
 ```
 
 or scheduled, in this example we will run every friday at 17:00
@@ -51,5 +51,5 @@ jobs:
         with:
           PERSONAL_TOKEN: ${{secrets.PERSONAL_TOKEN}}
           BRANCH_NAME: development
-          DEFAULT_BRANCH: ${{default-branch}}
+          DEFAULT_BRANCH: ${{github.event.repository.default_branch}}
 ```
